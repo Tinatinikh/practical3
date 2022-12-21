@@ -8,18 +8,22 @@ function NavMenu () {
     return (
         <div className="navitem">
            <nav className="navmenu">
-            <ul>
+            <div className="div-one">
+                <li> <img  className ="picshop" src={shop} /></li>
                 <li>მთავარი</li>
                 <li>ქალი</li>
                 <li>მამაკაცი</li>
                 <li>ბავშვი</li>
-                <li>კონტაქტი</li>
-                
-            </ul>
-            <img className="picshopping" src={shopping} />
-            <img  className ="picfavorite" src={favorite} />
-            <img  className ="picaccount" src={account} />
-            <img  className ="picshop" src={shop} />
+                <li>კონტაქტი</li>                
+          
+            </div>
+            <div className="div-two">
+                <img className="pics" src={shopping} />
+                <img  className ="pics" src={favorite} />
+                <img  className ="pics" src={account} />
+               
+                </div>
+          
            </nav>
         </div>
     )

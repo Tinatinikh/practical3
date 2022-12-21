@@ -20,9 +20,11 @@ function Cart(){
         
         {
         produqtebi.map(item =>( 
-            <div key={item.id}  > 
-               {item.title+ " "+ item.description+ " " + item.price}
+            <div key={item.id}  className="div-items"> 
                <img src={item.image}></img>
+               <h4>{item.title}</h4>
+               <p>{item.description}  </p> 
+               <h4>{item.price}</h4>          
        
             </div>   
         ))
