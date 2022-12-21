@@ -5,10 +5,11 @@ export default function apiRequests(method,endpoint, data,headers ={}){
         Verified : "uniqueVerif" 
     }
     return axios({
-        url:`https://fakestoreapi.com/products${{ endpoint }}`,
+        url:"https://fakestoreapi.com/"+endpoint,
         method,
         data,
         headers : {... defaultHEader,...headers}
 
 })
+.then(response => response.data)
 }

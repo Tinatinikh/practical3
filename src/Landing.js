@@ -1,13 +1,11 @@
 import { useEffect, useRef, useState } from "react";
 import apiRequests from "./apiRequests"
-import useRequest from "./hooks/useRequest";
+import{useQuery} from "react-query";
 
 function Cart(){
     const [produqtebi, setProduqtebi] = useState([])
-    const [value, setValue] = useState('')
-    const inputRef = useRef()  
 
-    const [data] = apiRequests('GET', "https://fakestoreapi.com/products")  
+    const {data} = useQuery("products",()=>   apiRequests('GET', "products"))  
     
     console.log(data);
     
@@ -17,23 +15,19 @@ function Cart(){
         }
     },[data])
 
-    useEffect(() =>{
-        inputRef.current.focus();
-    }, [])
-
 
     return <div  className="products">
-        <ul>
+        
         {
         produqtebi.map(item =>( 
-            <li key={item.id}  > 
+            <div key={item.id}  > 
                {item.title+ " "+ item.description+ " " + item.price}
                <img src={item.image}></img>
        
-            </li>   
+            </div>   
         ))
         }
-        </ul>
+        
         
     </div>
 }

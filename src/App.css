@@ -5,4 +5,23 @@ button{
   padding: 5px;
 }
 
+.picshop{
+  padding-left: 35px;
+  margin: 10px;
+  height: 70px;
+  width: 100px;
+}
+
+.products {
+  width:  200px;
+  height: 200px;
+  display: inline-block;
+  margin: 50px 80px;
+  text-align: center; 
+}
+
+img{
+  width: 100px;
+  height: 100px;
+}
 
